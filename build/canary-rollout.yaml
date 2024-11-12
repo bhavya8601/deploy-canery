@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: my-website-rollout
-  namespace: mynamespace  # Replace with your desired namespace
+  namespace: canary11  # Replace with your desired namespace
 spec:
   replicas: 3
   strategy:

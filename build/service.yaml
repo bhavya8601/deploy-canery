@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-website-service
-  namespace: canary
+  namespace: canary11
 spec:
   selector:
     app: my-website
