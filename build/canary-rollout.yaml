@@ -26,6 +26,6 @@ spec:
     spec:
       containers:
         - name: my-website-container
-          image: bsajmera/myapp:7
+          image: bsajmera/myapp:6
           ports:
             - containerPort: 80
