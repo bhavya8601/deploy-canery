@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-website-service
+  namespace: canary11  # Replace with your desired namespace
+spec:
+  selector:
+    app: my-website  # Matches the label on your rollout's pods
+  ports:
+    - protocol: TCP
+      port: 80            # The port the service will expose inside the cluster
+      targetPort: 80      # The port your container is listening on
+      nodePort: 30081     # The NodePort that will be exposed outside the cluster (choose a random available port)
+  type: NodePort        # Exposes the service via NodePort

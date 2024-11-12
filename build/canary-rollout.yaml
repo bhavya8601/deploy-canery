@@ -8,10 +8,14 @@ spec:
   strategy:
     canary:
       steps:
-        - setWeight: 20  # First, deploy 20% of the traffic to the new version
-        - pause: {}  # Optional: Add a pause between steps
-        - setWeight: 100  # Then deploy the remaining 80% (total 100%)
-        - pause: {}
+        - setWeight: 20
+        - pause: {duration: 20s}
+        - setWeight: 50
+        - pause: {duration: 20s}
+        - setWeight: 75
+        - pause: {duration: 20s}
+        - setWeight: 100
+        - pause: {duration: 20s}  
   selector:
     matchLabels:
       app: my-website
